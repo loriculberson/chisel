@@ -65,6 +65,4 @@ class ChunkIdentifierTest < Minitest::Test
     assert_equal "list", chunky.identifier
   end
 
-
-
 end

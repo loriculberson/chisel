@@ -3,7 +3,6 @@ class ChunkIdentifier
 
   def initialize(chunk)
     @chunk = chunk
-
   end
 
   def identifier
