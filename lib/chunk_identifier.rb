@@ -1,14 +1,10 @@
 class ChunkIdentifier
-  attr_reader :chunk
 
-  def initialize(chunk)
-    @chunk = chunk
-  end
-
-  def identifier
+  def identifier(chunk)
     if chunk.start_with?('#')
-       "header"
-    elsif chunk.start_with?('*') || chunk.match(/^\d+\./)
+      "header"
+    elsif chunk.start_with?('*') || chunk.match(/\A\d+\./)
+      # chunk.match(/^\d+\./)
       "list"
     else
       "paragraph"
